@@ -65,27 +65,107 @@
       <div class="container">
         <div class="content">
 
-          <!--- THE START OF ONE DAY'S UPDATE -->
-          <h3>March 9 - March 15</h3>
+         
+          <!--  MARCH 23-29 WEEKS'S UPDATE -->
+          <h2 style="color:darkred">March 23 - March 29</h2>
+          <h5 style="color:darkred">Weekly Objectives</h5>
+
+          <ul>
+            <li>App development using React Native</li>
+            <li>Set up server for Arduino</li>
+            <li>Beginning construction of the electrical systems and finalizing connections between components. </li>
+          </ul>
+
+          <h5 style="color:darkred">Challenges</h5>
+
+          <h6><i>Housing/Mechanical Challenges</i></h6>
+          <ul>
+            <li>Due to COVID-19, access to manufacturing processes were difficult at first, but luckily, we were able to borrow some tools from someone we know. We had to drive all the way to San Jose to utilize these tools.</li>
+            <li>Human error was definitely a challenge to overcome as many measurements were off by little increments and the usage of tools were not exactly perfect such as using the saws to cut in a straight line despite making marks of where to cut. To solve this we improvised our initial design by tweaking the initial measurements we made through our CAD design.</li>
+            <li>When we were drilling/screwing components together, factors that we didn’t initially consider was the length of the nail vs. the thickness of the components. However, this was resolved by using smaller wood pieces to make the penetration depth thicker so the nail wouldn’t stick out and possibly crack the wood.</li>
+            <li>Looking at the product as a whole was also difficult initially because we made each housing component first. When we had to assemble everything together into one product, it was difficult. A lot of undoing the screws and going back and forth happened in order to get the product as a complete whole. This could have been prevented if we planned out beforehand how everything would combine together with the screws.</li>
+          </ul>
+
+          <h6><i>Software & Server Challenges</i></h6>
+          <ul>
+            <li>Getting everyone to learning how to contribute with Git was a big challenge. It was confusing at first to understand forks, cloning, and branches. With online resources, we were able to catch everyone up to speed.</li>
+            <li>We had difficulty with initializing the React Native app. We did not know how to start the app until we used expo.</li>
+            <li>Not everyone had NPM, Xcode, or expo installed, so we had to configure everyone's machine to ensure the app could run</li>
+            <li>Dealing with merge conflicts was another issue, as at the beginning the codebase would change rapidly</li>
+            <li>Not many of the pledge brothers are familiar with C, and less so with sockets, so we had to spend some time to research and make sure that the sockets functioned as we intended.</li>
+          </ul>
+
+          <h5 style="color:darkred">Progress</h5>
+          <h6><i>Housing/Mechanical</i></h6>
+
+          <ul>
+            <li>Saturday (3/27): drilled holes and utilized screws again this time to combine each housing component to one whole product, added the back panel to enclose the open spaces in the rear view, made a drawer mechanism for the electrical housing for easier access, used a hacksaw to cut little wood piece resembling fencing on the shelves to designate an area for each pot/plant </li>
+          </ul>
+          
+          <h6><i>Software & Server</i></h6>
+
+          <ul>
+            <li>Have barebones React Native app working</li>
+            <li>Have Git organization set up where everyone learned how to contribute with the fork -> clone -> commit -> pull request workflow</li>
+            <li>Used React Navigation to route the home page, pots page, calendar page, and settings page</li>
+            <li>Installed Calendar npm package to set up the calendar page</li>
+            <li>Created version 2 of mockups which ironed out details in the settings page, such as asking users for plant type, soil type, and pot dimensions</li>
+            <li>We have a basic server that can listen for and service connection requests. We also created a struct to store the plant settings for each particular plant, and implemented logic for updating settings based on the data sent from the app.</li>
+          </ul>
+          <h6><i>Electrical</i></h6>
+
+          <ul>
+            <li>The electrical team received the majority of their components and begun assembly. There is one power source for the Arduino that delivers 12 V, which the Arduino board then regulates down to 5 V and 3.3 V. Used in conjunction with a breadboard, the pumps, lights, and cameras can all be powered and connected.</li>
+          </ul>
+          
+          <h5 style="color:darkred">Next Steps</h5>
+          <ul>
+            <li>Glue fencing pieces together, sand parts of the wood, cover up screws and unwanted gaps with wood filler paste, utilize Carnauba Paste Wax, paint housing with Theta Tau colors</li>
+            <li>Set up Arduino server and API</li>
+            <li>Set up React Native app to fetch and send data from API and store data in state</li>
+            <li>Code a timer that will write to the Arduino based on the settings of the plant to perform specific actions such as turning lights on and off, turning the pump on, and retrieving and storing pictures taken by the cameras.</li>
+            <li>For electrical, we will assemble and secure the electrical system into the wooden frame.</li>
+          </ul>
+
+          <h5 style="color:darkred">Photos</h5>
+
+          <img src="./images/housing2229.jpeg" width="222"/>
+          <img src="./images/justinsaw2229.jpeg" width="222"/>
+          <img src="./images/electrical2229.JPG" width="222"/>
+          <img src="./images/water2229.JPG" width="222"/>
+          <img src="./images/softwareupdate2229.png" width="495"/>
+          <img src="./images/grinding2229.JPG" width="400"/>
+
+
+        
+
+
+           <!-- MARCH 16-22 WEEK'S UPDATE -->
+
+           <h2 style="color:darkred">March 16 - March 22</h2>
+           <h5 style="color:darkred">Weekly Objectives</h5>
+           <ul>
+             <li>Construct the physical frame</li>
+             <li>Set up app development</li>
+           </ul>
+           <h5 style="color:darkred">Progress</h5>
+           <h6><i>Housing/Mechanical</i></h6>
+          <ul>
+            <li>Monday (3/22): made measurements on the wood for each respective housing component, cut each wood using a circular power saw, drilled holes and utilized screws to combine the base and sides of each housing (shelves, water tank, electrical), finished the basic layout of our physical product (every housing component is still separate)  </li>
+          </ul>
+          <img src="./images/1622day1.jpeg" width="200"/>
+
+           <!--- MARCH 9-15 WEEK'S UPDATE -->
+          <h2 style="color:darkred">March 9 - March 15</h2>
+          <h5 style="color:darkred">Progress</h5>
+
           <ul>
             <li>Ordered materials</li>
             <li>Perform background botany research on different plant types to define customization guidelines</li>
             <li>Complete a finalized development plan for the mechanical and software components of the project</li>
           </ul>
-          <!-- THE END OF ONE DAY'S UPDATE -->
 
-          <h3>March 16 - March 22</h3>
-          <ul>
-            <li>Construct the physical frame</li>
-            <li>Construct and attach water system and light system</li>
-          </ul>
 
-          <h3>March 23 - March 29</h3>
-          <ul>
-            <li>Implement wiring to water and light system</li>
-            <li>App development using React Native</li>
-            <li>Set up server for Arduino</li>
-          </ul>
           
         </div>
       </div>
