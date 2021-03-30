@@ -84,3 +84,16 @@ body {
   text-align: center;
   font-size: 14px;
 }
+
+@media only screen and (max-width: 1024px) {
+  .navbar-hidden {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .buttons {
+    align-items: flex-start;    
+    flex-direction: column;
+  }
+}
