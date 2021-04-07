@@ -43,6 +43,9 @@
               <a class="navbar-item" href="software.html">
                 Software
               </a>
+              <a class="navbar-item" href="botany.html">
+                Botany
+              </a>
               <a class="navbar-item" href="process.html">
                 Process
               </a>
@@ -61,6 +64,77 @@
         </div>
       </div>
     </section>
+    <section class="info">
+      <div class="container">
+        <div class="content">    
+          <h1>Electrical Component Overview</h1>
+    
+          <h5 style="color:darkred">New Electrical Plan</h5>
+          <h6>The Raspberry Pi</h6>
+          <p> The raspberry pi takes pictures of the plants using a pi camera module and uploads it to firebase where it can be fetched by the app</p>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <img src="./images/rpi.png"/>
+          </div>
+          <div class="column">
+            <div class="content">
+              <h3 style="color:darkred">Materials</h3>
+              <ul>
+                <li>The Raspberry Pi 3 B+ </li>
+                <li>Boost Module</li>
+                <li>Power Supply Adapter</li>
+                <li>Raspberry Pi Extender</li>
+                <li>Raspberry Pi Camera Module</li>
+                <li>External Power Supply</li>              
+              </ul>
+            </div>
+          </div>
+         
+          </div>
+
+         
+  
+        </div>
+    </section>
+
+    <section class="info">
+      <div class="container">
+        <div class="content">
+        
+          <h5 style="color:darkred">Old Electrical Plan</h5>
+          <h6>The Arduino</h6>
+          <p>The arduino draws data from the database to check when the plants were last watered and then via a relay turns the pumps on or off when the elapsed interval between watering has passed. Similarly with the lights, it uses a library to control and set the color and turn lights on and off for certain time periods. It also reads input from the water sensor and writes to the database when the time comes to refill the tank.
+          </p>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <img src="./images/diagram2.jpeg"/>
+          </div>
+          <div class="column">
+            <div class="content">
+              <h3 style="color:darkred">Materials</h3>
+              <ul>
+                <li>Arduino Uno Wifi Rev 2</li>
+                <li>Breadboard</li>
+                <li>Breadboard Jumper Wires</li>
+                <li>12.0V AC Adapter</li>
+                <li>5.0V Power Supply</li>
+                <li>CQRobot Ocean Water Sensor </li>              
+              </ul>
+            </div>
+          </div>
+         
+          </div>
+
+         
+  
+        </div>
+    </section>
+    
+
 
   </body>
 </html>
