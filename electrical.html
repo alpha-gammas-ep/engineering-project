@@ -67,11 +67,10 @@
     <section class="info">
       <div class="container">
         <div class="content">    
-          <h1>Electrical Component Overview</h1>
+          <h1>Electrical Component Overview & Plan</h1>
     
-          <h5 style="color:darkred">New Electrical Plan</h5>
-          <h6>The Raspberry Pi</h6>
-          <p> The raspberry pi takes pictures of the plants using a pi camera module and uploads it to firebase where it can be fetched by the app</p>
+          <h6 style="color:darkred">The Raspberry Pi</h6>
+          <p> The raspberry pi takes pictures of the plants using a pi camera module and uploads it to firebase where it can be fetched by the app. We run the Python script controlling the cameras on startup to ensure that the Smart Garden still works when disconnected from power without any additional set up. </p>
         </div>
 
         <div class="columns">
@@ -91,11 +90,7 @@
               </ul>
             </div>
           </div>
-         
           </div>
-
-         
-  
         </div>
     </section>
 
@@ -103,9 +98,8 @@
       <div class="container">
         <div class="content">
         
-          <h5 style="color:darkred">Old Electrical Plan</h5>
-          <h6>The Arduino</h6>
-          <p>The arduino draws data from the database to check when the plants were last watered and then via a relay turns the pumps on or off when the elapsed interval between watering has passed. Similarly with the lights, it uses a library to control and set the color and turn lights on and off for certain time periods. It also reads input from the water sensor and writes to the database when the time comes to refill the tank.
+          <h6 style="color:darkred">The Arduino</h6>
+          <p>The arduino draws data from the database to check when the plants were last watered and then via a relay turns the pumps on or off when the elapsed interval between watering has passed. Similarly with the lights, it uses a library to control and set the color and turn lights on and off for certain time periods. It also reads input from the water sensor and writes to the database when the time comes to refill the tank. We use the digital output pins to control specific compononets.  
           </p>
         </div>
 
@@ -117,20 +111,41 @@
             <div class="content">
               <h3 style="color:darkred">Materials</h3>
               <ul>
-                <li>Arduino Uno Wifi Rev 2</li>
+                <li>Arduino Uno Rev 3</li>
                 <li>Breadboard</li>
                 <li>Breadboard Jumper Wires</li>
                 <li>12.0V AC Adapter</li>
                 <li>5.0V Power Supply</li>
-                <li>CQRobot Ocean Water Sensor </li>              
+                <li>CQRobot Ocean Water Sensor </li>    
+                <li>ESP8266 module</li>          
               </ul>
             </div>
           </div>
          
           </div>
+        </div>
+    </section>
 
-         
-  
+    <section class="info">
+      <div class="container">
+        <div class="content">
+          <h6 style="color:darkred">WiFi Module</h6>
+          <p>We use the ESP8266 to receive data from the database, however we can not control the output pins of the Arduino through the ESP8266. Instead, we use serial communication to tell the arduino what to output. 
+          </p>
+          <h6 style="color:darkred">Water Pumps</h6>
+          <p>The pumps connect to a 5V relay which receives inputs from a digital pin on the Arduino. When the Arduino receives a command from the ESP8266 telling it to turn on watering, the digital pin for the corresponding water pump will turn on causing the relay to send power to the pump. </p>
+          <h6 style="color:darkred">Light System</h6>
+          <p>The LED strips are controlled by the Adafruit Neopixel library allowing us to set the color of the individual lights. When we receive a command from the app the ESP8266 writes to the arduino and the arduino utilizes the library to turn the lights on.</p>
+
+          <h6 style="color:darkred">Water Sensor</h6>
+          <p>The water sensor connects directly from the tank to the ESP8266. This will prohibit any watering commands to be sent when the tank is empty. We also update the database when the water sensors senses no water in the tank. </p>
+          <h6 style="color:darkred">Electrical Set Up</h6>
+
+          <img src="./images/electricalhub.jpg" width="300"/>
+
+        </div>
+
+
         </div>
     </section>
     
