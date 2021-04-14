@@ -71,12 +71,68 @@
       <div class="container">
         <div class="content">
           <!--  Final Project -->
+          <h2 style="color:darkred">Final Updates: April 6 - April 13</h2>
+          <h5 style="color:darkred">Challenges</h5>
+
+          <h6><i>Housing/Mechanical Challenges</i></h6>
+          <ul>
+            <li>We came across issues designing the lid. We tried cutting into the plastic but eventually decided on a tarp lid.</li>
+          </ul>
+
+          <h6><i>Software Challenges</i></h6>
+          <ul>
+            <li>Async issues when fetching images. The app pulls images from Firebase storage in addition to Realtime database, so we must ensure that images are loaded in addition to Realtime database before we render components</li>
+            <li>We forgot to bind certain functions. This caused rendering issues, so we had to convert them to ES6 arrow functions</li>
+            <li>A ton of merge conflicts, especially with package-lock.json</li>
+            <li>Issues with using both yarn and npm. It may have caused inconsistencies and conflicts</li>
+
+          </ul>
+
+          <h6><i>Electrical Challenges</i></h6>
+          <ul>
+            <li>The ESP8266 module has its own microcontroller, and initially we used the arduino as a usb hub to upload data to the ESP8266, meaning we could not control the pins using the code from the ESP8266. We remedied this by using Serial communication between the two components, and sending certain codes corresponding to different actions and controlling the outputs of the arduino that way.</li>
+            <li>The raspberry pi would not automatically run the python script for the cameras on startup, so we had to add a command to the rc.local file enabling that. However when we did that, we could not find certain modules because they were installed globally, so we had to add flags to run it as a User and also to include full file paths.</li>
+          </ul>
+
+          <h5 style="color:darkred">Progress</h5>
+          <h6><i>Housing/Mechanical</i></h6>
+          <ul>
+            <li>Using a tarp material, hooks, and grommets to create a custom lid for the water tank to prevent dust and materials getting into the water</li>
+          </ul>
+
+          <h6><i>Software</i></h6>
+          <ul> 
+            <li>Implemented controls page to allow user to manually turn on lights, water pump, and take photos</li>
+            <li>Touched up styles, making them more consistent along the app</li>
+            <li>Allow users to click on calendar day to see which plants are being watered on that day and display photos (provided that the day is in the past, and the plant has already been planted)</li>
+            <li>Pots page now shows photos taken of plants for the last seven days</li>
+            <li>Fixed units for settings page. Pot diameter and length are specified as centimeters</li>
+          </ul>
+
+          <h6><i>Electrical</i></h6>
+          <ul>
+            <li>Hooked up ESP8266 wifi module to connect to wifi and send and receive electrical data and communicate with the arduino board.</li>
+            <li>Hooked up the lights to the power source to turn on the lights when prompted by app.</li>
+            <li>Hooked up the pumps to the relays and send inputs to turn it on when prompted by app.</li>
+            <li>Hooked up the water sensor to tell the app when the tank is empty</li>
+            <li>Set up raspberry pi to take and upload images.</li>
+          </ul>
 
 
-          <div class = "newestweek" style="background-color:  rgb(252, 252, 252); border-radius: 35px;  padding: 10px; border: 15px solid   rgb(255, 255, 255)">
+          <h5 style="color:darkred">Photos</h5>
+          <img src="./images/asse.jpg" width="220"/>
+          <img src="./images/side.jpg" width="220"/>
+          <img src="./images/wiringset.jpg" width="220"/>
+          <img src="./images/electricalhub.jpg" width="220"/>
+
+
+
+
+
+
           <!--  MARCH 30-APRIL 5TH WEEKS'S UPDATE -->
           <h2 style="color:darkred">March 30 - April 5</h2>
-          <h5 style="color:darkred"><span style="background-color: lightgrey">Weekly Objectives</span></h5>
+          <h5 style="color:darkred">Weekly Objectives</h5>
 
           <ul> 
             <li>Finish up integrating electrical parts to the housing</li>
@@ -86,7 +142,7 @@
             <li>Make finishing touches like adding a door hatch and sliding mechanism for the housing</li>
           </ul>
 
-          <h5 style="color:darkred"><span style="background-color: lightgrey">Challenges</span></h5>
+          <h5 style="color:darkred">Challenges</h5>
 
           <h6><i>Housing/Mechanical Challenges</i></h6>
           <ul>
@@ -95,7 +151,7 @@
           </ul>
 
 
-          <h6><i>Software & Server Challenges</i></h6>
+          <h6><i>Software Challenges</i></h6>
           <ul>
             <li>Learning JavaScript's asynchronous nature, as this caused inconsistencies in our app's function (especially when state is updated)</li>
             <li>Reading and writing data from Firebase and figuring out how to store it in state</li>
@@ -112,7 +168,7 @@
 
 
 
-          <h5 style="color:darkred"><span style="background-color: lightgrey">Progress</span></h5>
+          <h5 style="color:darkred">Progress</h5>
           <h6><i>Housing/Mechanical</i></h6>
             <ul> 
               <li>Thursday (4/1): We needed to make changes to the housing part like adding a sliding mechanism and door hatch but did not have access to power tools to make the additions. However, we were eventually able to get access to the tools and drove to a church in San Jose to fix our housing componenet.</li>
@@ -142,7 +198,7 @@
           </ul>
 
 
-          <h5 style="color:darkred"><span style="background-color: lightgrey">Photos</span></h5>
+          <h5 style="color:darkred">Photos</h5>
           <img src="./images/IMG_3071.png" width="220"/>
           <img src="./images/IMG_3076.png" width="220"/>
           <img src="./images/IMG_7838.png" width="220"/>
@@ -152,12 +208,10 @@
 
 
 
-        </div>
 
-        <div class = "lastweek" style="background-color: rgba(248, 248, 248, 0.932); border-radius: 20px;  padding: 10px; border: 1px solid rgba(248, 248, 248, 0.932)">
           <!--  MARCH 23-29 WEEKS'S UPDATE -->
           <h2 style="color:darkred">March 23 - March 29</h2>
-          <h5 style="color:darkred"><span style="background-color: lightgrey">Weekly Objectives</span></h5>
+          <h5 style="color:darkred">Weekly Objectives</h5>
 
           <ul>
             <li>App development using React Native</li>
@@ -165,7 +219,7 @@
             <li>Beginning construction of the electrical systems and finalizing connections between components. </li>
           </ul>
 
-          <h5 style="color:darkred"><span style="background-color: lightgrey">Challenges</span></h5>
+          <h5 style="color:darkred">Challenges</h5>
 
           <h6><i>Housing/Mechanical Challenges</i></h6>
           <ul>
@@ -184,7 +238,7 @@
             <li>Not many of the pledge brothers are familiar with C, and less so with sockets, so we had to spend some time to research and make sure that the sockets functioned as we intended.</li>
           </ul>
 
-          <h5 style="color:darkred"><span style="background-color: lightgrey">Progress</span></h5>
+          <h5 style="color:darkred">Progress</h5>
           <h6><i>Housing/Mechanical</i></h6>
 
           <ul>
@@ -207,7 +261,7 @@
             <li>The electrical team received the majority of their components and begun assembly. There is one power source for the Arduino that delivers 12 V, which the Arduino board then regulates down to 5 V and 3.3 V. Used in conjunction with a breadboard, the pumps, lights, and cameras can all be powered and connected.</li>
           </ul>
           
-          <h5 style="color:darkred"><span style="background-color: lightgrey">Next Steps</span></h5>
+          <h5 style="color:darkred">Next Steps</h5>
           <ul>
             <li>Glue fencing pieces together, sand parts of the wood, cover up screws and unwanted gaps with wood filler paste, utilize Carnauba Paste Wax, paint housing with Theta Tau colors</li>
             <li>Set up Arduino server and API</li>
@@ -216,7 +270,7 @@
             <li>For electrical, we will assemble and secure the electrical system into the wooden frame.</li>
           </ul>
 
-          <h5 style="color:darkred"><span style="background-color: lightgrey">Photos</span></h5>
+          <h5 style="color:darkred">Photos</h5>
 
           <img src="./images/housing2229.jpeg" width="222"/>
           <img src="./images/justinsaw2229.jpeg" width="222"/>
@@ -226,29 +280,25 @@
           <img src="./images/grinding2229.JPG" width="400"/>
 
 
-        </div>
 
-        <div class = "secondweek" style="background-color: rgb(252, 252, 252); border-radius: 30px;  padding: 10px; border: 10px solid   rgb(255, 255, 255)">
            <!-- MARCH 16-22 WEEK'S UPDATE -->
 
            <h2 style="color:darkred">March 16 - March 22</h2>
-           <h5 style="color:darkred"><span style="background-color: lightgrey">Weekly Objectives</span></h5>
+           <h5 style="color:darkred">Weekly Objectives</h5>
            <ul>
              <li>Construct the physical frame</li>
              <li>Set up app development</li>
            </ul>
-           <h5 style="color:darkred"><span style="background-color: lightgrey">Progress</span></h5>
+           <h5 style="color:darkred">Progress</h5>
            <h6><i>Housing/Mechanical</i></h6>
           <ul>
             <li>Monday (3/22): made measurements on the wood for each respective housing component, cut each wood using a circular power saw, drilled holes and utilized screws to combine the base and sides of each housing (shelves, water tank, electrical), finished the basic layout of our physical product (every housing component is still separate)  </li>
           </ul>
           <img src="./images/1622day1.jpeg" width="200"/>
-        </div>
 
            <!--- MARCH 9-15 WEEK'S UPDATE -->
-           <div class = "firstweek" style="background-color: rgba(248, 248, 248, 0.932); border-radius: 30px; padding: 10px; border: 10px solid rrgb(255, 255, 255)">
           <h2 style="color:darkred">March 9 - March 15</h2>
-          <h5 style="color:darkred"><span style="background-color: lightgrey">Progress</span></h5>
+          <h5 style="color:darkred">Progress</h5>
 
           <ul>
             <li>Ordered materials</li>
@@ -256,7 +306,6 @@
             <li>Complete a finalized development plan for the mechanical and software components of the project</li>
           </ul>
 
-        </div>
 
 
           
